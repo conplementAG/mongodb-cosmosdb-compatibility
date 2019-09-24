@@ -1,0 +1,20 @@
+{
+  "name": "poc",
+  "version": "1.0.0",
+  "description": "POC for testing MongoDB transition to CosmoDB with MongoDB API",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "GzKras",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "mongodb": "^3.3.2",
+    "mongoose": "^5.7.1"
+  },
+  "devDependencies": {
+    "jest": "^24.9.0"
+  }
+}

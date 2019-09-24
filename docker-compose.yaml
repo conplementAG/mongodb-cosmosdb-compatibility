@@ -1,0 +1,19 @@
+version: '3.2'
+
+services:
+  app:
+    image: poc:latest
+    restart: "always"
+    container_name: "app-poc"
+    env_file:
+      - .\app.config.env
+    volumes: 
+      - .\src:/usr/src
+    links:
+      - mongo
+  mongo:
+    image: mongo:3.6
+    restart: "always"
+    container_name: "mongo"
+    ports:
+      - "27017:27017"
