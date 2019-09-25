@@ -6,11 +6,13 @@ services:
     restart: "always"
     container_name: "app-poc"
     env_file:
-      - .\app.config.env
+      - .\app.env
     volumes: 
       - .\src:/usr/src
     links:
       - mongo
+    ports:
+      - "8080:3000"
   mongo:
     image: mongo:3.6
     restart: "always"
