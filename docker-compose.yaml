@@ -7,7 +7,6 @@ services:
     container_name: "app-localcosmos"
     env_file:
       - .\app.localcosmos.env
-    network_mode: "host"
   app-cosmos:
     image: poc:latest
     restart: "no"

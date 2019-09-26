@@ -13,3 +13,8 @@ docker run -it --rm -v %cd%\src:/usr/src poc:latest
 ==========================
 
 npm run twatch
+
+=========================
+
+When using the azure cosmos emulator for local development the url to access the locahost is host.docker.internal.
+Currently docker-for-desktop dosent have any affect on network_mode = host. It works only on Linux.
