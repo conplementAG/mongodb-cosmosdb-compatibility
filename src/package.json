@@ -23,7 +23,6 @@
     "@babel/plugin-transform-modules-commonjs": "^7.6.0",
     "@babel/preset-env": "^7.6.2",
     "babel-jest": "^24.9.0",
-    "babel-preset-es2015": "^6.24.1",
     "faker": "^4.1.0",
     "jest": "^24.9.0"
   },

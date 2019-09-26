@@ -5,7 +5,7 @@ import asyncForEach from './helpers';
 
 
 beforeAll(async () => {
-  await DBConnectionFactory.createMongoDBConnection();
+  await DBConnectionFactory.create(process.env.DB_CONNECTION_TYPE);
 })
 
 it('Aggregate should get only 5 users where age is greater then 20', async done => {

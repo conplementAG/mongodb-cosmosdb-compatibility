@@ -1,7 +1,6 @@
 const mongoose = require('mongoose');
 const app = require('express')();
 
-
 mongoUrl = process.env.MongoUrl;
 console.log(mongoUrl)
 

@@ -6,8 +6,8 @@ import asyncForEach from './helpers';
 let user = undefined;
 
 beforeAll(async () => {
-  await DBConnectionFactory.createMongoDBConnection();
-  user = new User({name: 'gzkras', email: 'gzkras@gz.com'});
+    await DBConnectionFactory.create(process.env.DB_CONNECTION_TYPE);
+    user = new User({name: 'gzkras', email: 'gzkras@gz.com'});
 })
 
 it('Should get only name property', async done => {

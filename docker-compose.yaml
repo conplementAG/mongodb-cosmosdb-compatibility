@@ -1,14 +1,25 @@
 version: '3.2'
 
 services:
-  app:
+  app-localcosmos:
+    image: poc:latest
+    restart: "no"
+    container_name: "app-localcosmos"
+    env_file:
+      - .\app.localcosmos.env
+    network_mode: "host"
+  app-cosmos:
+    image: poc:latest
+    restart: "no"
+    container_name: "app-cosmos"
+    env_file:
+      - .\app.cosmos.env
+  app-mongo:
     image: poc:latest
     restart: "always"
-    container_name: "app-poc"
+    container_name: "app-mongo"
     env_file:
-      - .\app.env
-    volumes: 
-      - .\src:/usr/src
+      - .\app.mongo.env
     links:
       - mongo
     ports:
