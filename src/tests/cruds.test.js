@@ -8,7 +8,7 @@ function arrangeUser() {
 let user = undefined;
 
 beforeAll(async () => {
-  await DBConnectionFactory.create(process.env.DB_CONNECTION_TYPE);
+  await DBConnectionFactory.create();
   user = arrangeUser();
 })
 

@@ -22,9 +22,9 @@ First you need to create a CosmoDB instance in Azure.
 
 If you are not logged in Azure use `az login` from the cli.
 
-Be sure to set the right subscription using `az account set subscription xxxxxxxxx`.
+Be sure to set the right subscription using `az account set --subscription xxxxxxxxx`.
 
-Now you can run the script `set-cosmosdb.sh` that sits on root of project structure.
+Now you can change the parameter and run the script `set-cosmosdb.sh` that sits on the `scripts` folder.
 
 This will create cosmodb instance and output the neccessary information that you will need to follow along.
 
@@ -58,8 +58,9 @@ Each of our app containers  will need their .env files namely:
 - `app.cosmos.env` used to hold the credentials of the cosmos db instance in azure
 - `app.localcosmos.env` used to hold the credentials of the local cosmos db instnace
 - `app.mongo.env` used to hold the credentials of the local mongodb instance
+- `mongo.env` contains the init username and password configuration, template is `mongo.env.template`
 
-After creating and filling the three files from the root folder you can start everything using
+After creating and filling the env files from the root folder you can start everything using
 `docker-compose up`
 
 ## Known issues

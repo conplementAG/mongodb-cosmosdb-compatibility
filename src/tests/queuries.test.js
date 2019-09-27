@@ -6,7 +6,7 @@ import asyncForEach from './helpers';
 let user = undefined;
 
 beforeAll(async () => {
-    await DBConnectionFactory.create(process.env.DB_CONNECTION_TYPE);
+    await DBConnectionFactory.create();
     user = new User({name: 'gzkras', email: 'gzkras@gz.com'});
 })
 

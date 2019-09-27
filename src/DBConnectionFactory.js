@@ -6,30 +6,13 @@ class DBConnectionFactory {
         this._connection = undefined;
     }
 
-    async create(connType) {
-        debugger;
-        if(connType == "MongoDB"){
-            return await this.createMongoDBConnection();
-        }
-        else if(connType == "CosmoDB"){
-            return await this.createCosmosDBConnection();
-        }
-        else {
-            throw "No valid connection type available";
-        }
-    }
-
-    async createMongoDBConnection() {
-        this._connection = await connect(process.env.DB_CONNSTR, { useNewUrlParser: true } );
-        return this._connection;
-    }
-    
-    async createCosmosDBConnection() {
+    async create() {
         this._connection = await connect(process.env.DB_CONNSTR, {
             auth: {
               user: process.env.DB_USERNAME,
               password: process.env.DB_PASSWORD
-            }
+            },
+            useNewUrlParser: true
         })
         return this._connection;
     }
