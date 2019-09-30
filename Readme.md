@@ -28,6 +28,8 @@ Now you can change the parameter and run the script `set-cosmosdb.sh` that sits 
 
 This will create cosmodb instance and output the neccessary information that you will need to follow along.
 
+Note: Aggregation pipelines by default are disabled. The `set-cosmosdb.sh` enables them but if you create the CosmoDB manually go to the CosmoDB account under `Preview Features` and enable Aggregation Pipeline.
+
 #### Azure CosmoDB Emulator for local development
 
 Download and install CosmoDB emulator from https://aka.ms/cosmosdb-emulator.
