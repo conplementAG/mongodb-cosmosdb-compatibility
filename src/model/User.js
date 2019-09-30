@@ -4,7 +4,6 @@ const userSchema = new Schema({
   name: String,
   email: {
     type: String, 
-    require: true, 
     unique: true
   },
   age: Number

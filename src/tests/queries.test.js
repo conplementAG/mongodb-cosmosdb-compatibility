@@ -54,7 +54,7 @@ it('Should count only 2 documents', async done => {
 
     await asyncForEach(users, async u => await u.save());;
 
-    const res = await User.find().count()
+    const res = await User.find().countDocuments()
 
     expect(res).toBe(2);
 
