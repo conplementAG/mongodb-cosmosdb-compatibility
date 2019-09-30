@@ -11,4 +11,6 @@ COPY ./src .
 EXPOSE 3000
 EXPOSE 9229
 
-CMD [ "nodemon", "index.js" ]
+CMD ["test"]
+
+ENTRYPOINT [ "npm", "run" ]

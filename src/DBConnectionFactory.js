@@ -2,12 +2,8 @@ import { connect, connection as _connection } from 'mongoose';
 
 class DBConnectionFactory {
 
-    constructor() {
-        this._connection = undefined;
-    }
-
     async create() {
-        this._connection = await connect(process.env.DB_CONNSTR, {
+        await connect(process.env.DB_CONNSTR, {
             auth: {
               user: process.env.DB_USERNAME,
               password: process.env.DB_PASSWORD
@@ -17,13 +13,11 @@ class DBConnectionFactory {
             useUnifiedTopology: true
         })
 
-        return this._connection;
+        return _connection;
     }
 
     async closeConnection(){
-        if(this._connection.close){
-            await this._connection.close();
-        }
+        await _connection.close();
     }
 }
 

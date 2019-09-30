@@ -15,7 +15,7 @@ services:
       - .\app.cosmos.env
   app-mongo:
     image: poc:latest
-    restart: "always"
+    restart: "no"
     container_name: "app-mongo"
     env_file:
       - .\app.mongo.env
