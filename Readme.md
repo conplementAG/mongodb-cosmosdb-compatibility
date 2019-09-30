@@ -8,7 +8,7 @@ We are using MongoDB 3.6 beacuse its one of the version where LTS expiry is stil
 - MongoDB 3.2 LTS expired on 2019. 
 
 ## Getting Started
-`git clone RepoName`
+`git clone https://github.com/conplementAG/mongodb-cosmosdb-compatibility`
 
 ## Prerequisites
 - Docker 

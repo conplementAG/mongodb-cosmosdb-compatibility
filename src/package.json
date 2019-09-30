@@ -1,16 +1,21 @@
 {
-  "name": "poc",
+  "name": "mongodb-cosmosdb-compatibility",
   "version": "1.0.0",
   "description": "POC for testing MongoDB transition to CosmoDB with MongoDB API",
   "main": "index.js",
+  "keywords": [
+    "MongoDB",
+    "CosmosDB",
+    "compatibility",
+    "Docker"
+  ],
   "scripts": {
     "test": "jest",
     "twatch": "jest --watchAll",
     "test:debug": "node --inspect-brk=0.0.0.0 node_modules/.bin/jest --runInBand /tests",
     "start" : "nodemon index.js"
   },
-  "author": "GzKras",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "body-parser": "^1.19.0",
     "dotenv": "^8.1.0",
