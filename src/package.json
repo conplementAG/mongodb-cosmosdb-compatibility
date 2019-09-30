@@ -6,7 +6,8 @@
   "scripts": {
     "test": "jest",
     "twatch": "jest --watchAll",
-    "test:debug": "node --inspect-brk=0.0.0.0 node_modules/.bin/jest --runInBand /tests"
+    "test:debug": "node --inspect-brk=0.0.0.0 node_modules/.bin/jest --runInBand /tests",
+    "start" : "nodemon index.js"
   },
   "author": "GzKras",
   "license": "ISC",

@@ -83,9 +83,9 @@ If you install the node_modules from the container then it will work when you ch
 If you want to test each of the connections you can log into the respective containers using 
 `docker exec -it xxxcontainer_idxxx "/bin/bash"`
 
-The application has been configured with three script commands which can be run using `npm run command_name` 
-- `test` runs all the tests once
+The application has been configured with script commands which can be run using `npm run command_name` 
+- `test` runs all the tests once (Default)
 - `twatch` runs the tests on watch mode, helpful when mounting the `.\src` folder and connection to the container interactivly.
 - `test:debug` opens the possibility to debug the tests remotly using `chrome://inspect` (dont forget to port map in the docker-compose.yaml)
-
+- `start` which starts nodemon index.js. Use it to keep the container alive (e.g. to connect to the container). You can override it in docker-compose file.
 The tests are written to test basic CRUD operations, Aggregations and more complex Queuries.
