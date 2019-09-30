@@ -12,8 +12,11 @@ class DBConnectionFactory {
               user: process.env.DB_USERNAME,
               password: process.env.DB_PASSWORD
             },
-            useNewUrlParser: true
+            useNewUrlParser: true,
+            useCreateIndex: true,
+            useUnifiedTopology: true
         })
+
         return this._connection;
     }
 
